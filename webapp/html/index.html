@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Textarea caret -->
+    <script src="jquery.caret.js"></script>
+    <!-- My script -->
+    <script src="index.js"></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <h4 class="breadcrumb-item active mx-auto" aria-current="page" >WRITING WITH TRACY</h4>
+      </ol>
+    </nav>
+
+    <!-- Textarea -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="page-wrapper">
+          	<div class="page-container">
+          		<div class="page-inner">
+          			<div class="editor">
+                  <textarea class="form-control" id="input_area" rows="50"></textarea>
+          			</div>
+                <!-- Suggestion boxes -->
+                <div id="ql-mention-list-container">
+                  <ul class="ql-mention-list" id="list_result">
+                    <li class="ql-mention-list-item" id="result_0" onclick="append_text(this.id)">0</li>
+                    <li class="ql-mention-list-item" id="result_1" onclick="append_text(this.id)">1</li>
+                    <li class="ql-mention-list-item" id="result_2" onclick="append_text(this.id)"></li>
+                  </ul>
+                </div>
+          		</div>
+          	</div>
+          </div>
+        </div>
+
+        <!-- Model settings -->
+        <div class="col-sm-4">
+          <div class="page-wrapper">
+          	<div class="page-container">
+          		<div class="page-inner">
+          			<h6 class="card-subtitle mb-2 text-muted text-center title-margin">MODEL SETTINGS</h6>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="modelSelect">Model Types</label>
+                  </div>
+                  <select class="custom-select" id="modelSelect">
+                    <option selected>GPT-2: Finetuned 1</option>
+                  </select>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="temperatureSelect">Temperature</label>
+                  </div>
+                  <input type="range" class="custom-range" min="0" max="10" value=8 id="temperatureSelect">
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="topPSelect">Top-p</label>
+                  </div>
+                  <input type="range" class="custom-range" min="0" max="10" value=9 id="topPSelect">
+                </div>
+
+          		</div>
+          	</div>
+          </div>
+        </div>
+    </div>
+    </div>
+
+  </body>
+</html>
