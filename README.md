@@ -8,8 +8,7 @@ You can use the pretrained GPT-2 model for general text, or follow the instructi
 Model in Tensorflow format can be converted to Pytorch using [HuggingFace's Transformers library](https://github.com/huggingface/transformers) 
 
 ```python 
-from transformers.convert_gpt2_original_tf_checkpoint_to_pytorch 
-                import convert_gpt2_checkpoint_to_pytorch
+from transformers.convert_gpt2_original_tf_checkpoint_to_pytorch import convert_gpt2_checkpoint_to_pytorch
 
 gpt2_checkpoint_path = "path to TF checkpoint"
 gpt2_config_file = "path to model config file"
