@@ -1,3 +1,4 @@
+TEST
 # Text Auto Completion demo with GPT-2 model
 
 This repo contains the source code of python API and HTML demo for Text Auto Completion.
