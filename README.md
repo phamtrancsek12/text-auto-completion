@@ -1,4 +1,5 @@
 TEST
+Test2
 # Text Auto Completion demo with GPT-2 model
 
 This repo contains the source code of python API and HTML demo for Text Auto Completion.
@@ -6,9 +7,9 @@ This repo contains the source code of python API and HTML demo for Text Auto Com
 ## Model Training
 You can use the pretrained GPT-2 model for general text, or follow the instruction at [GPT-2 repo](https://github.com/nshepperd/gpt-2/) to finetune the GPT-2 model on your own data set.
 
-Model in Tensorflow format can be converted to Pytorch using [HuggingFace's Transformers library](https://github.com/huggingface/transformers) 
+Model in Tensorflow format can be converted to Pytorch using [HuggingFace's Transformers library](https://github.com/huggingface/transformers)
 
-```python 
+```python
 from transformers.convert_gpt2_original_tf_checkpoint_to_pytorch import convert_gpt2_checkpoint_to_pytorch
 
 gpt2_checkpoint_path = "path to TF checkpoint"
@@ -32,7 +33,7 @@ input = flask.request.args.get('input')
 temperature = float(flask.request.args.get('temperature', default=0.8))
 top_p = float(flask.request.args.get('top_p',  default=0.9))
 ```
- 
+
 Please refer to [this article](https://huggingface.co/blog/how-to-generate) for more information about `temperature` and `top_p` values
 
 ## HTML demo
